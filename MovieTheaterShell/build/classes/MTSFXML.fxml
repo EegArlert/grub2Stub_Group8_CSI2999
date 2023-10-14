@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MTSFXMLController">
+   <children>
+      <Button fx:id="btnCon" layoutX="176.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnConClicked" prefHeight="25.0" prefWidth="150.0" text="Concessions" />
+      <TextField layoutX="339.0" layoutY="112.0" prefHeight="25.0" prefWidth="150.0" promptText="Search..." />
+      <GridPane layoutX="22.0" layoutY="348.0" prefHeight="25.0" prefWidth="225.0" AnchorPane.bottomAnchor="347.0" AnchorPane.leftAnchor="22.0" AnchorPane.rightAnchor="1058.0" AnchorPane.topAnchor="348.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane alignment="CENTER" layoutX="251.0" layoutY="348.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Button fx:id="btn9A" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" text="9:00 AM" textAlignment="CENTER" />
+            <Button fx:id="btn3P" mnemonicParsing="false" text="3:00 PM" GridPane.columnIndex="1" />
+            <Button fx:id="btn9P" mnemonicParsing="false" text="9:00 PM" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="528.0" layoutY="348.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="787.0" layoutY="348.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="1041.0" layoutY="348.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="10.0" layoutY="664.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="251.0" layoutY="664.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="528.0" layoutY="664.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="787.0" layoutY="664.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <GridPane layoutX="1041.0" layoutY="664.0" prefHeight="25.0" prefWidth="225.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 AM" textAlignment="CENTER" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="3:00 PM" textAlignment="CENTER" GridPane.columnIndex="1" />
+            <Hyperlink alignment="CENTER" prefHeight="23.0" prefWidth="65.0" text="9:00 PM" textAlignment="CENTER" GridPane.columnIndex="2" />
+         </children>
+      </GridPane>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="55.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/barbie.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="297.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/creator.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="573.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/dune.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="833.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/haunting.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="1087.0" layoutY="148.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/hunger.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="56.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/oppenheimer.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="175.0" layoutX="296.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/spiderman.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="574.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/wonka.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="833.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/fnaf.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="200.0" fitWidth="200.0" layoutX="1087.0" layoutY="464.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@movieposters/greek.jpg" />
+         </image>
+      </ImageView>
+      <ComboBox fx:id="cbTickets" layoutX="14.0" layoutY="112.0" prefWidth="150.0" promptText="Tickets" />
+   </children>
+</AnchorPane>
