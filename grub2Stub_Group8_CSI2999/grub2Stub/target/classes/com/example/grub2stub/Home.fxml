@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="335.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.grub2stub.HomeController">
+   <children>
+      <Button fx:id="btnFood" layoutX="118.0" layoutY="288.0" mnemonicParsing="false" onAction="#btnFoodClick" prefHeight="25.0" prefWidth="100.0" text="Food" />
+      <Button fx:id="btnBeverages" layoutX="118.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnBeveragesClick" prefHeight="25.0" prefWidth="100.0" text="Beverages" />
+      <Button fx:id="btnSnacks" layoutX="118.0" layoutY="413.0" mnemonicParsing="false" onAction="#btnSnacksClick" prefHeight="25.0" prefWidth="100.0" text="Snacks" />
+      <Button fx:id="btnCart" layoutX="118.0" layoutY="496.0" mnemonicParsing="false" onAction="#btnCartClick" prefHeight="25.0" prefWidth="100.0" text="Cart" />
+      <Label layoutX="131.0" layoutY="62.0" text="Home!">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
