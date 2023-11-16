@@ -33,12 +33,6 @@ public class FoodController {
 
     @FXML
     void btnFoodCartClick(ActionEvent event) {
-        Connection conn = DBConnector.connect();
 
-        if (conn != null) {
-            testText.setText("Connection successful!");
-        } else {
-            testText.setText("Connection failed!");
-        }
     }
 }
