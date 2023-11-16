@@ -3,6 +3,16 @@ import java.sql.Connection;  // <-- Manually add this line
 import java.sql.DriverManager;  // <-- And this line
 
 public class DBConnector {
+
+    static {
+        try {
+            // Load the SQLite JDBC driver
+            Class.forName("org.sqlite.JDBC");
+        } catch (ClassNotFoundException e) {
+            System.err.println("SQLite JDBC driver not found");
+            e.printStackTrace();
+        }
+    }
     public static Connection connect() {
         Connection conn = null;
         try {
