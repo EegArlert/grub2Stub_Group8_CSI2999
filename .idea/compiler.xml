@@ -9,8 +9,5 @@
         <module name="grub2Stub" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="grub2Stub" target="19" />
-    </bytecodeTargetLevel>
   </component>
 </project>
