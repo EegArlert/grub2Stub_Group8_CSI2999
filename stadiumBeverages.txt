@@ -1,0 +1,17 @@
+Water, 1.50
+Iced Tea, 1.75
+Lemonade, 1.75
+Pepsi, 1.99
+Diet Pepsi, 1.99
+Coke, 1.99
+Diet Coke, 1.99
+Dr Pepper, 1.99
+Diet Dr Pepper, 1.99
+Mountain Dew, 1.99
+Starry, 1.99
+Vanilla Shake, 2.35
+Chocolate Shake, 2.35
+Strawberry Shake, 2.35
+Oreo Shake, 2.55
+Coffee, 1.25
+Decaf Coffee, 1.25

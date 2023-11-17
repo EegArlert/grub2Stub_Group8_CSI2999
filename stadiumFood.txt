@@ -1,0 +1,22 @@
+12" Personal NY Style Pizza, 10.99
+17" New York Style Pizza, 15.99
+Hot Dog, 2.99
+Chili Dog, 3.15
+Hamburger, 2.50
+Cheeseburger, 2.75
+Bacon Cheeseburger, 2.99
+Small Fries, 1.50
+Small Chili Fries, 1.65
+Large Fries, 2.50
+Large Chili Fries, 2.65
+4-Piece Fried Chicken, 4.00
+6-Piece Fried Chicken, 5.00
+8-Piece Fried Chicken, 6.00
+Chicken Sandwich, 3.45
+Spicy Chicken Sandwich, 3.65
+Buffalo Chicken Wrap, 3.00
+Chicken Wrap, 2.80
+Ceasar Wrap, 2.85
+BBQ Chicken Sandwich, 4.35
+Pulled Pork Sandwich, 4.50
+
