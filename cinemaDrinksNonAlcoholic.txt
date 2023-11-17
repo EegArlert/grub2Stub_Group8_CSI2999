@@ -1,0 +1,10 @@
+Soda (Medium), 3.50
+Bottled Water, 2.50
+Iced Tea, 3.00
+Lemonade, 3.00
+Fruit Juice, 3.50
+Coffee, 2.50
+Hot Chocolate, 2.50
+Milkshake, 4.50
+Smoothie, 4.00
+Energy Drink, 3.50
