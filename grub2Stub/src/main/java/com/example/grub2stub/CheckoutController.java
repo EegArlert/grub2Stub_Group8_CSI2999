@@ -124,6 +124,28 @@ public class CheckoutController {
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
             stage.show();
+
+            System.out.println("CUSTOMER COPY");
+            System.out.println("-------------");
+            System.out.println("Name : ");
+            System.out.println("Order Number: ");
+            System.out.println("Row: " + " " + " Seat: ");
+            System.out.println("Items: ");
+            System.out.println("Cost: ");
+            System.out.println("Tip: ");
+            System.out.println("Total Cost: ");
+
+            System.out.println(" ");
+
+            System.out.println("MERCHANT COPY");
+            System.out.println("-------------");
+            System.out.println("Name: ");
+            System.out.println("Order Number: ");
+            System.out.println("Row: " + " Seat: ");
+            System.out.println("Items: ");
+            System.out.println("Cost: ");
+            System.out.println("Tip: ");
+            System.out.println("Total Cost: ");
         }
     }
 
