@@ -15,7 +15,7 @@ public class OrderDetail {
     public OrderDetail(Customer customer, ArrayList<FoodItem> foodItemArrayList){
         this.orderID = nextOrderId++;
         this.userId = customer.getCustID();
-        this.items = new ArrayList<>(foodItemArrayList);
+        this.items = foodItemArrayList;
         this.customer = customer;
         //this.status = OrderStatus;
     }
