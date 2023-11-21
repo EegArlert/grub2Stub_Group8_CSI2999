@@ -134,9 +134,9 @@ public class CheckoutController {
 
             //Create order
             ArrayList<FoodItem> INSERT_FOODITEM_ARRAYLIST = new ArrayList<>(); //PLACEHOLDER
-            OrderDetail order = new OrderDetail(customer, INSERT_FOODITEM_ARRAYLIST);
+            OrderDetail customerOrder = new OrderDetail(customer, INSERT_FOODITEM_ARRAYLIST);
 
-            order.displayOrderDetails();
+            customerOrder.displayOrderDetails();
         }
     }
 
