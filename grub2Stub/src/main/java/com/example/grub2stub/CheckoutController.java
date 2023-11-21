@@ -12,6 +12,8 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import javafx.scene.control.TextFormatter;
+
+import java.util.ArrayList;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
 
@@ -125,27 +127,16 @@ public class CheckoutController {
             stage.setScene(scene);
             stage.show();
 
-            System.out.println("CUSTOMER COPY");
-            System.out.println("-------------");
-            System.out.println("Name : ");
-            System.out.println("Order Number: ");
-            System.out.println("Row: " + " " + " Seat: ");
-            System.out.println("Items: ");
-            System.out.println("Cost: ");
-            System.out.println("Tip: ");
-            System.out.println("Total Cost: ");
+            //Create customer
+            Customer customer = new Customer(creditCardName.getText());
+            customer.setSeatRow(rowNumber.getText());
+            customer.setSeatNumber(seatNumber.getText());
 
-            System.out.println(" ");
+            //Create order
+            ArrayList<FoodItem> INSERT_FOODITEM_ARRAYLIST = new ArrayList<>(); //PLACEHOLDER
+            OrderDetail order = new OrderDetail(customer, INSERT_FOODITEM_ARRAYLIST);
 
-            System.out.println("MERCHANT COPY");
-            System.out.println("-------------");
-            System.out.println("Name: ");
-            System.out.println("Order Number: ");
-            System.out.println("Row: " + " Seat: ");
-            System.out.println("Items: ");
-            System.out.println("Cost: ");
-            System.out.println("Tip: ");
-            System.out.println("Total Cost: ");
+            order.displayOrderDetails();
         }
     }
 

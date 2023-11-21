@@ -7,12 +7,15 @@ public class FoodItem {
     private int foodPointsValue;
     private int foodType;
 
-    public FoodItem(int foodID, String foodName, int foodPrice, int foodPointsValue, int foodType) {
+    private int foodQuantity;
+
+    public FoodItem(int foodID, String foodName, int foodPrice, int foodPointsValue, int foodType, int foodQuantity) {
         this.foodID = foodID;
         this.foodName = foodName;
         this.foodPrice = foodPrice;
         this.foodPointsValue = foodPointsValue;
         this.foodType = foodType;
+        this.foodQuantity = foodQuantity;
     }
 
     public int getFoodID() {
@@ -53,5 +56,13 @@ public class FoodItem {
 
     public void setFoodType(int foodType) {
         this.foodType = foodType;
+    }
+
+    public void setFoodQuantity(int foodQuantity){
+        this.foodQuantity = foodQuantity;
+    }
+
+    public int getFoodQuantity(){
+        return foodQuantity;
     }
 }

@@ -3,25 +3,23 @@ package com.example.grub2stub;
 public class Customer {
     private static int nextUserId = 1;
     private int custID;
-    private String custEmail;
+    private String custName;
     private int custTotalPoints;
     private String seatNumber;
 
-    public Customer(String custEmail) {
+    private String seatRow;
+
+    public Customer(String name) {
         this.custID = nextUserId++;
-        this.custEmail = custEmail;
-    }
-
-    public void placeOrder(){
-
+        this.custName = name;
     }
 
     public int getCustID() {
         return custID;
     }
 
-    public String getCustEmail() {
-        return custEmail;
+    public String getCustName() {
+        return custName;
     }
 
     public int getCustTotalPoints() {
@@ -32,6 +30,18 @@ public class Customer {
         this.custTotalPoints = custTotalPoints;
     }
 
-    public String getSeatNumber(){return seatNumber;}
-    public void setSeatNumber(){this.seatNumber = seatNumber;}
+    public String getSeatNumber(){
+        return seatNumber;
+    }
+    public void setSeatNumber(String seatNumber){
+        this.seatNumber = seatNumber;
+    }
+
+    public void setSeatRow(String seatRow){
+        this.seatRow = seatRow;
+    }
+
+    public String getSeatRow(){
+        return seatRow;
+    }
 }
