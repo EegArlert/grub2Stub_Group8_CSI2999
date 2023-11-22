@@ -45,6 +45,6 @@
             <Font name="Comic Sans MS" size="24.0" />
          </font>
       </Label>
-      <TextField fx:id="errorField" alignment="CENTER" editable="false" layoutX="93.0" layoutY="273.0" style="-fx-background-color: transparent; -fx-text-fill: red;" />
+      <TextField fx:id="errorField" editable="false" layoutX="34.0" layoutY="272.0" style="-fx-background-color: transparent; -fx-text-fill: red;" />
    </children>
 </AnchorPane>
