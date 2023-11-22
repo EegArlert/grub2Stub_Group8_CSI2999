@@ -19,6 +19,8 @@ public class CheckoutController {
     @FXML
     private Button btnBackHome;
 
+    private int totalCounter = 0000000;
+
 
     @FXML
     void btnConfirmClick(ActionEvent event) throws Exception{

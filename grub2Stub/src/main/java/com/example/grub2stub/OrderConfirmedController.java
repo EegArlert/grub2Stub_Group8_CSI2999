@@ -21,5 +21,7 @@ public class OrderConfirmedController {
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         stage.setScene(scene);
         stage.show();
+
+        //OrderDetail saveThis = new OrderDetail();
     }
 }

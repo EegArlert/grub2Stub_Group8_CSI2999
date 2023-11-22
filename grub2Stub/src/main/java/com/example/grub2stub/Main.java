@@ -7,10 +7,12 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+
         Parent root = FXMLLoader.load(getClass().getResource("Home.fxml"));
         Scene scene = new Scene(root);
         stage.setScene(scene);

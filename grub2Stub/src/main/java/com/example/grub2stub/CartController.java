@@ -7,7 +7,10 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.GridPane;
 import javafx.stage.Stage;
+
+import java.util.Map;
 
 public class CartController {
 
@@ -16,6 +19,9 @@ public class CartController {
 
     @FXML
     private Button btnCheckout;
+
+    @FXML
+    private GridPane cartGridPane;
 
 
     @FXML
@@ -36,5 +42,19 @@ public class CartController {
         stage.show();
     }
 
+    // Method called automatically by JavaFX to set up the controller
+    public void initialize() {
+        // Here you can set up the initial state of the cart view
+        updateCartDisplay();
+    }
 
+    // Method to update the display of the cart with its current contents
+    private void updateCartDisplay() {
+        // Retrieve the cart items from the singleton Cart instance
+        Map<FoodItem, Integer> cartItems = Cart.getInstance().getItems();
+        // Now use cartItems to update the UI of your cart
+        // For example, populate a ListView or TableView with the cart contents
+
+
+    }
 }
