@@ -25,8 +25,8 @@ public class FileHandler {
         return foodItems;
     }
 
-        public void writeToFile(String filePath, ArrayList<String> data) throws IOException {
-            // Implementation...
-        }
+    public void writeToFile(String filePath, ArrayList<String> data) throws IOException {
+        // Implementation...
     }
+}
 

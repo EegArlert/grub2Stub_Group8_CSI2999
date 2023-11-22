@@ -57,7 +57,7 @@ public class OrderDetail {
         System.out.println("Name : " + customer.getCustName());
         System.out.println("Order Number: " + getOrderID());
         System.out.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
-        printOrderItems();
+        //printOrderItems();
         System.out.println("Total Cost: " + calulateTotal());
 
         System.out.println(" ");
@@ -67,13 +67,13 @@ public class OrderDetail {
         System.out.println("Name : " + customer.getCustName());
         System.out.println("Order Number: " + getOrderID());
         System.out.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
-        printOrderItems();
+        //printOrderItems();
         System.out.println("Total Cost: " + calulateTotal());
     }
 
-    public void printOrderItems(){
-        for (FoodItem item : getFoodItemList()){
-            System.out.printf("%-20s%-10s%-10s%n", item.getFoodName(), "Qty: " + item.getFoodQuantity(), "Price: $" + item.getFoodPrice() * item.getFoodQuantity());
-        }
-    }
+//    public void printOrderItems(){
+//        for (FoodItem item : getFoodItemList()){
+//            System.out.printf("%-20s%-10s%-10s%n", item.getFoodName(), "Qty: " + item.getFoodQuantity(), "Price: $" + item.getFoodPrice() * item.getFoodQuantity());
+//        }
+//    }
 }
