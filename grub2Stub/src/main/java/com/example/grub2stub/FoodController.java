@@ -1,5 +1,6 @@
 package com.example.grub2stub;
 
+import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -22,11 +23,9 @@ import java.util.HashMap;
 public class FoodController {
 
     // This assumes you have a TextField for quantity next to each item
-    private ArrayList<TextField> quantityFields = new ArrayList<>();
+    private ArrayList<TextField> quantityFields;
 
     private ArrayList<FoodItem> foodItems;
-
-    private HashMap<FoodItem, Integer> cart = new HashMap<>();
 
     @FXML
     private Button btnHomeF;
@@ -48,12 +47,6 @@ public class FoodController {
 
     @FXML
     void btnFoodCartClick(ActionEvent event) {
-        cart.clear(); // Clear the cart before adding items
-
-    }
-
-    private void addToCart(ActionEvent event) {
-        // Iterate over the quantityFields and their corresponding FoodItems
         for (int i = 0; i < foodItems.size(); i++) {
             TextField qtyField = quantityFields.get(i); // Quantity TextField for the current item
             int quantity;
@@ -64,26 +57,56 @@ public class FoodController {
                 continue;
             }
 
+            FoodItem item = foodItems.get(i); // Get the corresponding FoodItem
             if (quantity > 0) {
-                FoodItem item = foodItems.get(i); // Get the corresponding FoodItem
-                Cart.getInstance().addItem(item, quantity); // Add the item and quantity to the cart
+                Cart.getInstance().addItem(item, quantity); // Add/update the item and quantity in the cart
+            } else {
+                Cart.getInstance().removeItem(item); // Remove the item if the quantity is zero
             }
         }
     }
 
+    public void updateQuantityFields() {
+        if (quantityFields == null || quantityFields.isEmpty()) {
+            System.out.println("quantityFields is null or empty");
+            return;
+        }
 
+        for (int i = 0; i < foodItems.size(); i++) {
+            FoodItem item = foodItems.get(i);
+            TextField qtyField = quantityFields.get(i);
+            int quantity = Cart.getInstance().getEnteredQuantity(item);
+            qtyField.setText(String.valueOf(quantity));
+        }
+    }
 
     @FXML
-    private void initialize() {
+    private void initialize () {
+
+        quantityFields = new ArrayList<>();
         FileHandler fileHandler = new FileHandler();
         foodItems = fileHandler.readFoodItemsFromFile("cinemaFood.txt");
+        updateQuantityFields();
 
         for (int i = 0; i < foodItems.size(); i++) {
             FoodItem item = foodItems.get(i);
 
-            Label nameLabel = new Label(String.format("%s - $%.2f", item.getFoodName(), item.getFoodPrice()));
-            TextField qtyField = new TextField("0");
+            // Create a final variable for use inside the lambda
+            final FoodItem currentItem = item;
+            int storedQuantity = Cart.getInstance().getEnteredQuantity(item);
+            Label nameLabel = new Label(String.format("%s - $%.2f", currentItem.getFoodName(), currentItem.getFoodPrice()));
+            TextField qtyField = new TextField(String.valueOf(storedQuantity));
+            qtyField.textProperty().addListener((observable, oldValue, newValue) -> {
+                System.out.println("Quantity for " + currentItem.getFoodName() + " changed to: " + newValue);
+                try {
+                    int quantity = Integer.parseInt(newValue);
+                    Platform.runLater(() -> Cart.getInstance().setEnteredQuantity(currentItem, quantity));
+                } catch (NumberFormatException e) {
+                    // Handle invalid input, if necessary
+                }
+            });
             qtyField.setPrefWidth(50); // Adjust the width as necessary
+            quantityFields.add(qtyField);
 
             Button incrementButton = new Button("+");
             incrementButton.setOnAction(e -> {
@@ -100,11 +123,14 @@ public class FoodController {
 
             // Add elements to the GridPane
             gridPane.add(nameLabel, 0, i);      // Column 0, Row i
-            gridPane.add(incrementButton, 3, i);// Column 1, Row i
+            gridPane.add(decrementButton, 1, i);// Column 1, Row i
             gridPane.add(qtyField, 2, i);       // Column 2, Row i
-            gridPane.add(decrementButton, 1, i);// Column 3, Row i
+            gridPane.add(incrementButton, 3, i);// Column 3, Row i
         }
-
-
     }
+
 }
+
+
+
+
