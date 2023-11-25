@@ -24,6 +24,9 @@ public class CartController {
     @FXML
     private GridPane cartGridPane;
 
+    @FXML
+    private Label totalPrice;
+
 
     @FXML
     void btnHomeCClick(ActionEvent event) throws Exception {
@@ -46,6 +49,7 @@ public class CartController {
     @FXML
     private void initialize() {
         updateCartDisplay(); // This should be called to populate the cart when the view is loaded
+        updateTotalPrice();
     }
 
     public void updateCartDisplay() {
@@ -75,7 +79,17 @@ public class CartController {
 
             row++; // Move to the next row for the next item
         }
+    }
 
+    public void updateTotalPrice() {
+        double total = 0.0;
+        for (Map.Entry<FoodItem, Integer> entry : Cart.getInstance().getItems().entrySet()) {
+            FoodItem item = entry.getKey();
+            Integer quantity = entry.getValue();
+            total += item.getFoodPrice() * quantity; // Calculate total price
+        }
 
+        // Now, update the totalPrice label
+        totalPrice.setText(String.format("$%.2f", total)); // Format to 2 decimal places
     }
 }

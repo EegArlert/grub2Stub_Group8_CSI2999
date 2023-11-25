@@ -94,7 +94,7 @@
                               <Font name="Comic Sans MS Bold" size="14.0" />
                            </font>
                         </Label>
-                        <Label text="\$$$$" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10">
+                        <Label fx:id="totalPrice" text="\$$$$" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="10">
                            <font>
                               <Font name="System Bold" size="14.0" />
                            </font>
