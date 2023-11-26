@@ -128,7 +128,7 @@ public class CheckoutController {
 
             //Create order
             OrderDetail customerOrder = new OrderDetail(customer);
-            customerOrder.displayOrderDetails();
+            customerOrder.displayOrderDetails("receipt.txt");
             String orderIDAsString = String.valueOf(customerOrder.getOrderID());
 
             Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmed.fxml"));

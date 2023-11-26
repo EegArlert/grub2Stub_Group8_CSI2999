@@ -1,5 +1,8 @@
 package com.example.grub2stub;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.Map;
 
 public class OrderDetail {
@@ -39,28 +42,33 @@ public class OrderDetail {
         return total;
     }
 
-    public void displayOrderDetails(){
-        Customer customer = getCustomer();
-        System.out.println("CUSTOMER COPY");
-        System.out.println("-------------");
-        System.out.println("Name : " + customer.getCustName());
-        System.out.println("Order Number: " + getOrderID());
-        System.out.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
-        printOrderItems();
-        System.out.printf("Total Cost: $%.2f%n", calulateTotal());
+    public void displayOrderDetails(String fileName){
+        try(PrintWriter writer = new PrintWriter(new FileWriter(fileName))){
+            Customer customer = getCustomer();
+            writer.println("CUSTOMER COPY");
+            writer.println("-------------");
+            writer.println("Name : " + customer.getCustName());
+            writer.println("Order Number: " + getOrderID());
+            writer.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
+            printOrderItems(writer);
+            writer.printf("Total Cost: $%.2f%n", calulateTotal());
 
-        System.out.println(" ");
+            writer.println(" ");
 
-        System.out.println("MERCHANT COPY");
-        System.out.println("-------------");
-        System.out.println("Name : " + customer.getCustName());
-        System.out.println("Order Number: " + getOrderID());
-        System.out.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
-        printOrderItems();
-        System.out.printf("Total Cost: $%.2f%n", calulateTotal());
+            writer.println("MERCHANT COPY");
+            writer.println("-------------");
+            writer.println("Name : " + customer.getCustName());
+            writer.println("Order Number: " + getOrderID());
+            writer.println("Row: " + customer.getSeatRow() + " Seat: " + customer.getSeatNumber());
+            printOrderItems(writer);
+            writer.printf("Total Cost: $%.2f%n", calulateTotal());
+        }
+        catch  (IOException e){
+            e.printStackTrace();
+        }
     }
 
-    public void printOrderItems(){
+    public void printOrderItems(PrintWriter writer){
         Map<FoodItem, Integer> items = Cart.instance.getItems();
         for (Map.Entry<FoodItem, Integer> entry : items.entrySet()){
             FoodItem item = entry.getKey();
@@ -68,7 +76,7 @@ public class OrderDetail {
             double price = item.getFoodPrice() * quantity;
             String formattedPrice = String.format("%.2f", price);
 
-            System.out.printf("%-30s%-10s%-10s%n", item.getFoodName(), "Qty: " + quantity, "Price: $" + formattedPrice);
+            writer.printf("%-30s%-10s%-10s%n", item.getFoodName(), "Qty: " + quantity, "Price: $" + formattedPrice);
         }
     }
 }

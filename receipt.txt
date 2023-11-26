@@ -1,0 +1,23 @@
+CUSTOMER COPY
+CUSTOMER COPY
+-------------
+Name : Alan
+Order Number: 1
+Row: 12 Seat: W
+Nachos with Cheese            Qty: 1    Price: $6.00
+Chocolate Covered Almonds     Qty: 1    Price: $4.00
+Hot Dog                       Qty: 1    Price: $4.00
+Popcorn Chicken               Qty: 1    Price: $6.50
+Total Cost: $20.50
+ 
+CUSTOMER COPY
+CUSTOMER COPY
+-------------
+Name : Alan
+Order Number: 1
+Row: 12 Seat: W
+Nachos with Cheese            Qty: 1    Price: $6.00
+Chocolate Covered Almonds     Qty: 1    Price: $4.00
+Hot Dog                       Qty: 1    Price: $4.00
+Popcorn Chicken               Qty: 1    Price: $6.50
+Total Cost: $20.50
