@@ -8,11 +8,20 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
+import javafx.scene.control.Label;
 
 public class OrderConfirmedController {
 
     @FXML
     private Button btnOrderHome;
+
+    @FXML
+    private Label orderNumberLabel;
+
+    public void setOrderNumberLabel(String orderNumber){
+        String text = "Order #: " + orderNumber;
+        orderNumberLabel.setText(text);
+    }
 
     @FXML
     void btnOrderHomeClick(ActionEvent event) throws Exception {

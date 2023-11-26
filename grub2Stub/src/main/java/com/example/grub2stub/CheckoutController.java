@@ -13,7 +13,6 @@ import javafx.stage.Stage;
 
 import javafx.scene.control.TextFormatter;
 
-import java.util.ArrayList;
 import java.util.function.UnaryOperator;
 import java.util.regex.Pattern;
 
@@ -49,6 +48,7 @@ public class CheckoutController {
 
     @FXML
     private CheckBox confirmAge;
+
     @FXML
     void initialize() {
         // Set up TextFormatter for creditCardNumber
@@ -121,22 +121,21 @@ public class CheckoutController {
             errorField.setText("Credit Card is invalid.");
         }
         else {
-            Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmed.fxml"));
-            Scene scene = new Scene(root);
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(scene);
-            stage.show();
-
             //Create customer
             Customer customer = new Customer(creditCardName.getText());
             customer.setSeatRow(rowNumber.getText());
             customer.setSeatNumber(seatNumber.getText());
 
             //Create order
-            ArrayList<FoodItem> INSERT_FOODITEM_ARRAYLIST = new ArrayList<>(); //PLACEHOLDER
-            OrderDetail customerOrder = new OrderDetail(customer, INSERT_FOODITEM_ARRAYLIST);
-
+            OrderDetail customerOrder = new OrderDetail(customer);
             customerOrder.displayOrderDetails();
+            String orderIDAsString = String.valueOf(customerOrder.getOrderID());
+
+            Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmed.fxml"));
+            Scene scene = new Scene(root);
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+            stage.setScene(scene);
+            stage.show();
         }
     }
 
@@ -159,6 +158,4 @@ public class CheckoutController {
         stage.show();
 
     }
-
-
 }
