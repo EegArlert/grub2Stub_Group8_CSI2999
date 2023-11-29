@@ -3,6 +3,7 @@ package com.example.grub2stub;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.geometry.HPos;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -69,10 +70,12 @@ public class CartController {
             // Create and add the quantity label
             Label quantityLabel = new Label(quantity.toString());
             GridPane.setConstraints(quantityLabel, 1, row); // Column 1, current row
+            GridPane.setHalignment(quantityLabel, HPos.CENTER); //Alignment of number in column
 
             // Create and add the cost label
             Label costLabel = new Label(String.format("$%.2f", cost));
             GridPane.setConstraints(costLabel, 2, row); // Column 2, current row
+            GridPane.setHalignment(costLabel, HPos.CENTER); //Alignment of cost in column
 
             // Add all to the GridPane
             cartGridPane.getChildren().addAll(nameLabel, quantityLabel, costLabel);
