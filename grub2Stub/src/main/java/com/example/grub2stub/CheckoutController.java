@@ -56,6 +56,8 @@ public class CheckoutController {
 
         // Set up TextFormatter for creditCardCVV
         setupNumericTextField(creditCardCVV);
+
+        checkForAlcoholInCart();
     }
 
     private void setupNumericTextField(TextField textField) {
@@ -100,6 +102,15 @@ public class CheckoutController {
         return (sum % 10 == 0);
     }
 
+    private void checkForAlcoholInCart() {
+        boolean containsAlcohol = Cart.getInstance().getItems().entrySet().stream()
+                .anyMatch(entry -> entry.getKey().getFoodName().toLowerCase().contains("contains alcohol"));
+
+        // If any item contains alcohol, show the confirmAge checkbox
+        confirmAge.setVisible(containsAlcohol);
+        confirmAge.setManaged(containsAlcohol); // This makes sure that layout calculations are done as if the checkbox isn't there when it's not visible.
+    }
+
     @FXML
     void btnConfirmClick(ActionEvent event) throws Exception{
         TextField[] allTextFields = {creditCardName, creditCardNumber, creditCardCVV, creditCardEXP, rowNumber, seatNumber};
@@ -120,6 +131,9 @@ public class CheckoutController {
         else if (!luhnTest(creditCardNumber.getText())){
             errorField.setText("Credit Card is invalid.");
         }
+        else if (confirmAge.isVisible() && !confirmAge.isSelected()){
+            errorField.setText("You must confirm your age to purchase alcohol.");
+        }
         else {
             //Create customer
             Customer customer = new Customer(creditCardName.getText());
@@ -131,7 +145,17 @@ public class CheckoutController {
             customerOrder.displayOrderDetails("receipt.txt");
             String orderIDAsString = String.valueOf(customerOrder.getOrderID());
 
-            Parent root = FXMLLoader.load(getClass().getResource("OrderConfirmed.fxml"));
+            //Load fxml file
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("OrderConfirmed.fxml"));
+            Parent root = loader.load();
+
+            //Access controller
+            OrderConfirmedController orderConfirmedController = loader.getController();
+
+            //Pass order number to new scene
+            orderConfirmedController.setOrderNumberLabel(orderIDAsString);
+
+            //Switch scene
             Scene scene = new Scene(root);
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(scene);
