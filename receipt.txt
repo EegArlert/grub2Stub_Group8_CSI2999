@@ -1,0 +1,13 @@
+CUSTOMER COPY
+-------------
+Name : a
+Order Number: 1
+Row: 1 Seat: 11
+Total Cost: $0.00
+ 
+MERCHANT COPY
+-------------
+Name : a
+Order Number: 1
+Row: 1 Seat: 11
+Total Cost: $0.00

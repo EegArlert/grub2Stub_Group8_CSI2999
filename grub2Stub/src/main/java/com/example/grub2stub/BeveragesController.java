@@ -16,6 +16,7 @@ import javafx.stage.Stage;
 import java.time.format.TextStyle;
 import java.util.ArrayList;
 import java.util.HashMap;
+import javafx.geometry.Pos;
 
 public class BeveragesController {
 
@@ -120,6 +121,8 @@ public class BeveragesController {
             gridPane.add(decrementButton, 1, i);// Column 1, Row i
             gridPane.add(qtyField, 2, i);       // Column 2, Row i
             gridPane.add(incrementButton, 3, i);// Column 3, Row i
+
+            qtyField.setAlignment(Pos.CENTER); //aligns number in center of field
         }
     }
 }

@@ -15,6 +15,7 @@ import javafx.stage.Stage;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
+import javafx.geometry.Pos;
 
 public class SnacksController {
     private ArrayList<TextField> quantityFields;
@@ -117,6 +118,8 @@ public class SnacksController {
             gridPane.add(decrementButton, 1, i);// Column 1, Row i
             gridPane.add(qtyField, 2, i);       // Column 2, Row i
             gridPane.add(incrementButton, 3, i);// Column 3, Row i
+
+            qtyField.setAlignment(Pos.CENTER); //aligns number in center of field
         }
 
     }

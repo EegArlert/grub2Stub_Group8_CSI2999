@@ -18,18 +18,18 @@
             <Image url="@images/grub2stubG.png" />
          </image>
       </ImageView>
-      <Label layoutX="165.0" layoutY="30.0" text="Cart">
+      <Label layoutX="175.0" layoutY="30.0" text="Cart">
          <font>
-            <Font name="Comic Sans MS" size="36.0" />
+            <Font name="Berlin Sans FB" size="36.0" />
          </font>
       </Label>
       <Button fx:id="btnHomeC" layoutX="20.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnHomeCClick" prefHeight="25.0" prefWidth="125.0" text="Home">
          <font>
-            <Font name="Comic Sans MS" size="18.0" />
+            <Font name="Arial Rounded MT Bold" size="18.0" />
          </font></Button>
       <Button fx:id="btnCheckout" layoutX="180.0" layoutY="550.0" mnemonicParsing="false" onAction="#btnCheckoutClick" prefHeight="25.0" prefWidth="125.0" text="Checkout">
          <font>
-            <Font name="Comic Sans MS" size="18.0" />
+            <Font name="Arial Rounded MT Bold" size="18.0" />
          </font></Button>
       <ScrollPane hbarPolicy="NEVER" layoutX="14.0" layoutY="100.0" prefHeight="442.0" prefWidth="310.0" style="-fx-background-color: transparent;" vbarPolicy="NEVER">
         <content>
