@@ -1,10 +1,17 @@
-Soda (Medium), 3.50
+Coke (Small), 2.50
+Coke (Large), 3.50
+Coke Diet (Small), 2.50
+Coke Diet (Large), 3.50
+Sprite (Small), 2.50
+Sprite (Large), 3.50
 Bottled Water, 2.50
 Iced Tea, 3.00
 Lemonade, 3.00
-Fruit Juice, 3.50
-Coffee, 2.50
+Hot Coffee, 2.50
+Iced Coffee, 3.00
 Hot Chocolate, 2.50
 Milkshake, 4.50
-Smoothie, 4.00
-Energy Drink, 3.50
+Banana Smoothie, 6.00
+Strawberry Smoothie, 6.00
+Chocolate Smoothie, 6.00
+Red Bull (8fl oz), 3.50

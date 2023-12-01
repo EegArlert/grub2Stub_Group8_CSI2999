@@ -1,7 +1,6 @@
-Candy Bars, 2.00
+Snickers, 2.00
 Gummy Bears, 3.00
 Chocolate Covered Almonds, 4.00
-Popcorn Chicken, 6.50
 Soft Pretzel Bites, 5.00
 Cheese Plate, 7.00
 Cookies, 3.00

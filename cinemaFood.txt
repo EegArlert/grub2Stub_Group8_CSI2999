@@ -1,6 +1,7 @@
 Popcorn, 5.50
 Hot Dog, 4.00
 Nachos with Cheese, 6.00
+Popcorn Chicken, 6.50
 Pretzel, 4.50
 Cheeseburger, 7.00
 Chicken Tenders, 7.50
@@ -8,8 +9,6 @@ Pizza Slice, 4.00
 French Fries, 3.50
 Mozzarella Sticks, 6.50
 Churros, 4.00
-Ice Cream, 3.00
 Chicken Wings, 8.00
-Salad, 6.00
 Sandwich (Turkey or Ham), 5.50
 Tacos, 7.00
