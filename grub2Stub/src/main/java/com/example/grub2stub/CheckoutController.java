@@ -49,6 +49,8 @@ public class CheckoutController {
     @FXML
     private CheckBox confirmAge;
 
+    private OrderStatus orderStatus = OrderStatus.getInstance();
+
     @FXML
     void initialize() {
         // Set up TextFormatter for creditCardNumber
@@ -135,6 +137,9 @@ public class CheckoutController {
             errorField.setText("You must confirm your age to purchase alcohol.");
         }
         else {
+            Cart cart = Cart.getInstance();
+            cart.clearCart();
+
             //Create customer
             Customer customer = new Customer(creditCardName.getText());
             customer.setSeatRow(rowNumber.getText());
@@ -154,6 +159,8 @@ public class CheckoutController {
 
             //Pass order number to new scene
             orderConfirmedController.setOrderNumberLabel(orderIDAsString);
+
+            orderStatus.setOrderPlaced(true);
 
             //Switch scene
             Scene scene = new Scene(root);

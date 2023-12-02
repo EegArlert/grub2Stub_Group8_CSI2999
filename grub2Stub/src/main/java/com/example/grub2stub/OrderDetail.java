@@ -6,7 +6,7 @@ import java.io.PrintWriter;
 import java.util.Map;
 
 public class OrderDetail {
-    private static int nextOrderId = 1;
+    private static int nextOrderId = 100001;
     private int orderID;
     private int userId;
 

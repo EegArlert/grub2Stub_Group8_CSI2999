@@ -1,5 +1,4 @@
 Water, 1.50
-Iced Tea, 1.75
 Lemonade, 1.75
 Pepsi, 1.99
 Diet Pepsi, 1.99
@@ -7,26 +6,18 @@ Coke, 1.99
 Diet Coke, 1.99
 Dr Pepper, 1.99
 Diet Dr Pepper, 1.99
-Mountain Dew, 1.99
-Starry, 1.99
 Vanilla Shake, 2.35
 Chocolate Shake, 2.35
 Strawberry Shake, 2.35
 Oreo Shake, 2.55
 Coffee, 1.25
-Decaf Coffee, 1.25
-Coors Light (contains alcohol), 6.50
 Budweiser (contains alcohol), 6.50
 Bud Light (contains alcohol), 6.50
 Corona (contains alcohol), 6.50
 Corona Light (contains alcohol), 6.50
-Angry Orchard (contains alcohol), 7.50
-Blake's Cider (contains alcohol), 7.50
-White Claw Natural Lime (contains alcohol), 7.00
 White Claw Black Cherry (contains alcohol), 7.00
 White Claw Lemon (contains alcohol), 7.00
 Gin and Tonic (contains alcohol), 8.00
 Rum and Coke (contains alcohol), 7.75
-Moscow Mule (contains alcohol), 7.75
 Mexican Mule (contains alcohol), 7.75
 Chardonnay (contains alcohol), 8.25

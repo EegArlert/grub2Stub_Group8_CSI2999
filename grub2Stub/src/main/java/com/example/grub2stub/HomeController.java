@@ -22,6 +22,8 @@ public class HomeController {
     @FXML
     private Button btnCart;
 
+    private OrderStatus orderStatus = OrderStatus.getInstance();
+
 
 
     @FXML
@@ -53,6 +55,7 @@ public class HomeController {
 
     @FXML
     void btnCartClick(ActionEvent event) throws Exception {
+        orderStatus.setOrderPlaced(false); // Reset the flag
         Parent root = FXMLLoader.load(getClass().getResource("Cart.fxml"));
         Scene scene = new Scene(root);
         Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

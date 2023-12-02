@@ -22,6 +22,7 @@ public class BeveragesController {
 
     private ArrayList<TextField> quantityFields;
     private ArrayList<FoodItem> foodItems;
+    private OrderStatus orderStatus = OrderStatus.getInstance();
 
     @FXML
     private Button btnHomeB;
@@ -76,11 +77,18 @@ public class BeveragesController {
             qtyField.setText(String.valueOf(quantity));
         }
     }
+
     @FXML
     private void initialize() {
+        orderStatus.orderPlacedProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal) {
+                resetQuantities();
+            }
+        });
+
         quantityFields = new ArrayList<>();
         FileHandler fileHandler = new FileHandler();
-        foodItems = fileHandler.readFoodItemsFromFile("cinemaDrinksNonAlcoholic.txt");
+        foodItems = fileHandler.readFoodItemsFromFile("cinemaDrinks.txt");
         updateQuantityFields();
 
         for (int i = 0; i < foodItems.size(); i++) {
@@ -123,6 +131,12 @@ public class BeveragesController {
             gridPane.add(incrementButton, 3, i);// Column 3, Row i
 
             qtyField.setAlignment(Pos.CENTER); //aligns number in center of field
+        }
+    }
+
+    private void resetQuantities() {
+        for (TextField qtyField : quantityFields) {
+            qtyField.setText("0");
         }
     }
 }

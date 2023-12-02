@@ -2,17 +2,10 @@ Small Popcorn, 2.25
 Large Popcorn, 3.25
 Small Nachos, 3.50
 Large Nachos, 4.00
-Cheese Quesadilla, 4.95
-Chicken Quesadilla, 5.15
-Steak Quesadilla, 5.50
 Small Fries, 1.50
 Large Fries, 2.50
-Small Chili Fries, 1.65
-Large Chili Fries, 2.65
 Soft Pretzel w/ Cheese, 2.00
 Soft Pretzel Bites w/ Cheese, 2.25
-BBQ Wings, 5.55
-Buffalo Wings, 5.55
 Cotton Candy, 4.75
 M&Ms, 1.99
 Skittles, 1.99

@@ -1,5 +1,6 @@
 Popcorn, 5.50
 Hot Dog, 4.00
+Fries, 5.00
 Nachos with Cheese, 6.00
 Popcorn Chicken, 6.50
 Pretzel, 4.50

@@ -20,6 +20,9 @@ import javafx.geometry.Pos;
 public class SnacksController {
     private ArrayList<TextField> quantityFields;
     private ArrayList<FoodItem> foodItems;
+
+    private OrderStatus orderStatus = OrderStatus.getInstance();
+
     @FXML
     private Button btnHomeS;
 
@@ -75,6 +78,12 @@ public class SnacksController {
 
     @FXML
     private void initialize() {
+        orderStatus.orderPlacedProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal) {
+                resetQuantities();
+            }
+        });
+
         quantityFields = new ArrayList<>();
         FileHandler fileHandler = new FileHandler();
         foodItems = fileHandler.readFoodItemsFromFile("cinemaSnacks.txt");
@@ -122,5 +131,10 @@ public class SnacksController {
             qtyField.setAlignment(Pos.CENTER); //aligns number in center of field
         }
 
+    }
+    private void resetQuantities() {
+        for (TextField qtyField : quantityFields) {
+            qtyField.setText("0");
+        }
     }
 }

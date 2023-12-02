@@ -36,6 +36,7 @@ public class FoodController {
 
     @FXML
     private GridPane gridPane;
+    private OrderStatus orderStatus = OrderStatus.getInstance();
 
     @FXML
     private void btnHomeFClick(ActionEvent event) throws Exception {
@@ -83,6 +84,11 @@ public class FoodController {
 
     @FXML
     private void initialize () {
+        orderStatus.orderPlacedProperty().addListener((obs, oldVal, newVal) -> {
+            if (newVal) {
+                resetQuantities();
+            }
+        });
 
         quantityFields = new ArrayList<>();
         FileHandler fileHandler = new FileHandler();
@@ -129,6 +135,12 @@ public class FoodController {
             gridPane.add(incrementButton, 3, i);// Column 3, Row i
 
             qtyField.setAlignment(Pos.CENTER); //aligns number in center of field
+        }
+    }
+
+    private void resetQuantities() {
+        for (TextField qtyField : quantityFields) {
+            qtyField.setText("0");
         }
     }
 
